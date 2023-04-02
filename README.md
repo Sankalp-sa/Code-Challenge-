@@ -12,6 +12,16 @@ Step 3 : Go to index.html and click on "go live" in bottom right corner.
 
 # Documentation of Web Components :
 
+## How to use my Web Components:
+
+Step 1 : add webComponent.js file in your project which also should be using bootstrap.
+
+Step 2 : add this script tag
+
+````html
+<script src="webComponent.js"></script>
+````
+
 ## Web Component 1 : NavBar
 
 ### Attributes Used :
@@ -21,8 +31,9 @@ Step 3 : Go to index.html and click on "go live" in bottom right corner.
 
 ### For example,
 
-![image](https://user-images.githubusercontent.com/102241865/229342352-7b187ae2-5d57-4372-bc10-f8d1a66ee020.png)
-
+````html
+<my-nav elements="UserCard table" route="/userCard.html /table.html"></my-nav>
+````
 here I have two elements UserCard and table and there route usercard.html and table.html repectively.
 
 ### Output :
@@ -49,14 +60,31 @@ Use div with attribute slot and use these
 
 ### Event handler used :
 
-Here, this web component has addition feature of toggle info button which you can see in the below vide
+Here, this web component has addition feature of toggle info button which you can see in the below video
 
 https://user-images.githubusercontent.com/102241865/229343651-f211b45c-b696-4809-9d17-b782e3cb112e.mp4
 
 
 ### For Example,
 
-![image](https://user-images.githubusercontent.com/102241865/229343731-fc7e4525-99cf-441a-b04e-b8f92bf4d676.png)
+````html
+  <div class="row">
+        <div class="col-3">
+            <user-card name="Sankalp" image="img/img1.jpg" color="cornflowerblue">
+                <div slot="email">sankalp.p@ahduni.edu.in</div>
+                <div slot="phone">165165651</div>
+                <div slot="about">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum in unde totam voluptatem? Doloribus impedit deleniti vel molestias                   expedita tempore consequuntur eius eum quibusdam a. Commodi deserunt quam nisi temporibus.</div>
+            </user-card>
+        </div>
+        <div class="col-3">
+            <user-card name="Vishal" image="img/img2.jpg" color="violet">
+                <div slot="email">sankalp.p@ahduni.edu.in</div>
+                <div slot="phone">165165651</div>
+                <div slot="about">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum in unde totam voluptatem? Doloribus impedit deleniti vel molestias                   expedita tempore consequuntur eius eum quibusdam a. Commodi deserunt quam nisi temporibus.</div>
+            </user-card>
+        </div>
+    </div>
+````
 
 here I have uses the above mentioned attributes and slot and this is the output
 
@@ -73,7 +101,9 @@ here I have uses the above mentioned attributes and slot and this is the output
 
 ### For example :
 
-![image](https://user-images.githubusercontent.com/102241865/229344076-097092dd-c1d4-426f-8749-a6bd9c39fa67.png)
+````html
+<my-table col="col1 col2 col3" row1="1 r1 r11 r111" row2="2 r2 r22 r222"></my-table>
+````
 
 here I have given the above attributes and this is the output,
 
