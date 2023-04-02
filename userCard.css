@@ -1,0 +1,13 @@
+
+.card{
+    margin: 5% !important;
+}
+
+img {
+    border: 2px solid black;
+}
+
+.card-body{
+    border: 2px solid black;
+    border-top: 0px solid black; 
+}
