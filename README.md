@@ -10,7 +10,6 @@ Step 3 : Go to index.html and click on "go live" in bottom right corner.
 
 ![image](https://user-images.githubusercontent.com/102241865/229342215-926dca50-e55e-4d72-9563-51b8156ef395.png)
 
-
 # Documentation of Web Components :
 
 ## Web Component 1 : NavBar
@@ -65,8 +64,23 @@ here I have uses the above mentioned attributes and slot and this is the output
 
 ![image](https://user-images.githubusercontent.com/102241865/229343757-c1a96e49-61d7-4e25-be75-7188334d905b.png)
 
-
 ## Web Component 3 : Table  
+
+### Attributes Used :
+
+1. col : columns of the table (give " " space between two different columns) 
+2. row1, row2 .... upto number of columns : fill the table by each row (give " " space between two different row elements)
+
+### For example :
+
+![image](https://user-images.githubusercontent.com/102241865/229344076-097092dd-c1d4-426f-8749-a6bd9c39fa67.png)
+
+here I have given the above attributes and this is the output,
+
+![image](https://user-images.githubusercontent.com/102241865/229344135-12f3df8b-22f9-4959-8fcc-9c5112dbb3ae.png)
+
+
+
 
 
 
