@@ -3,7 +3,7 @@
 const template1 = document.createElement("template");
 template1.innerHTML = `
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
 <div class="container-fluid">
   <a class="navbar-brand" href="/index.html">Navbar</a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,7 +12,7 @@ template1.innerHTML = `
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul id="nav-ul" class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="index.html">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">About</a>
@@ -211,3 +211,40 @@ class Table extends HTMLElement {
   
 window.customElements.define("my-table", Table);
 
+// <my-hero> Web Component
+
+const template3 = document.createElement("template");
+template3.innerHTML = `
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4" alt="" width="200" height="200">
+    <h1 class="display-5 fw-bold text-body-emphasis"></h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4"><slot name="desc"/></p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a href="https://github.com/Sankalp-sa/Code-Challenge-"><button type="button" class="btn btn-primary btn-lg px-4 gap-3">Code Challege Github</button></a
+      </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+`;
+
+class Hero extends HTMLElement {
+  constructor() {
+    super();
+    this.root = this.attachShadow({mode:"open"});
+    let clone = template3.content.cloneNode(true);
+    this.root.append(clone);
+
+    let image = this.getAttribute("image");
+    let title = this.getAttribute("title");
+
+    this.root.querySelector("img").src = "./img/"+image;
+    this.root.querySelector("h1").textContent = title;
+
+
+  }
+}
+
+
+window.customElements.define("my-hero", Hero);
