@@ -1,5 +1,21 @@
 # Code Challenge [5] Modularization of Components
 
+## Simple Web App having web components :
+
+### Hero Web component :
+
+![image](https://user-images.githubusercontent.com/102241865/229513988-090b630a-5fff-41d5-8afc-2157b31a7ce3.png)
+
+### User Card web component :
+
+![image](https://user-images.githubusercontent.com/102241865/229514502-72d4741a-548d-4737-b1c1-984fcee853bf.png)
+
+### Table web component :
+
+![image](https://user-images.githubusercontent.com/102241865/229514839-3e6bf417-2241-47f7-8c1d-486a6e0b44e3.png)
+
+
+
 ## How run the code challenge :
 
 Step 1 : Clone this repository
